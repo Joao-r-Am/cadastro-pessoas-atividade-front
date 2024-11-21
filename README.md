@@ -18,7 +18,7 @@
     nova tarefa POST - http://localhost:3000/api/task/create/:userId
     todas as tarefas GET - http://localhost:3000/api/task/:userId
 
-### Para inicar o projeto <a href="https://github.com/Joao-r-Am/front">front</a> execute a api e em seguida os comandos
+### Para inicar o projeto <a href="https://github.com/Joao-r-Am/cadastro-pessoas-atividade-front">front</a> execute a api e em seguida os comandos
 
     npm i // instalar todos os pacotes do projeto
     ng serve // para iniciar o projeto
