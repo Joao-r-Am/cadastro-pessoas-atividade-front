@@ -2,7 +2,7 @@
 
 - Projeto fullstack para cadastro de usuários, atividades, e sistema de autenticação.
 
-### Para iniciar o projeto inicie o projeto da api [link] e execute os seguintes comandos:
+### Para iniciar o projeto inicie o projeto da <a href="https://github.com/Joao-r-Am/cadastro-pessoas-atividade-api">api</a> e execute os seguintes comandos:
 
     npm i // instalar todos os pacotes do projeto
     npx sequelize-cli init //  migração do bd
@@ -18,7 +18,7 @@
     nova tarefa POST - http://localhost:3000/api/task/create/:userId
     todas as tarefas GET - http://localhost:3000/api/task/:userId
 
-### Para inicar o projeto front [link] execute a api e em seguida os comandos
+### Para inicar o projeto <a href="https://github.com/Joao-r-Am/front">front</a> execute a api e em seguida os comandos
 
     npm i // instalar todos os pacotes do projeto
     ng serve // para iniciar o projeto
