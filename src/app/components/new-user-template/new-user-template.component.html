@@ -1,0 +1,144 @@
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Nome</nz-form-label>
+    <nz-form-control
+      [nzSpan]="12"
+      nzHasFeedback
+      nzValidatingTip="Validating..."
+      [nzErrorTip]="userErrorTpl"
+    >
+      <input
+        nz-input
+        formControlName="nome"
+        placeholder="Maria Aparecida"
+        type="text"
+      />
+      <ng-template #userErrorTpl let-control>
+        @if (control.errors?.['required']) { Please input your username! } @if
+        (control.errors?.['duplicated']) { The username is redundant! }
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>E-mail</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzHasFeedback [nzErrorTip]="emailErrorTpl">
+      <input
+        nz-input
+        formControlName="email"
+        placeholder="maria@email.com"
+        type="email"
+      />
+      <ng-template #emailErrorTpl let-control>
+        @if (control.errors?.['email']) { The input is not valid E-mail! } @if
+        (control.errors?.['required']) { Please input your E-mail! }
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Senha</nz-form-label>
+    <nz-form-control
+      [nzSpan]="12"
+      nzHasFeedback
+      nzErrorTip="Please input your password!"
+    >
+      <input nz-input type="password" formControlName="senha" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Telefone</nz-form-label>
+    <nz-form-control
+      [nzSpan]="12"
+      nzHasFeedback
+      nzValidatingTip="Validating..."
+      [nzErrorTip]="userErrorTpl"
+    >
+      <input nz-input formControlName="telefone" type="tel" />
+      <ng-template #userErrorTpl let-control>
+        @if (control.errors?.['required']) { Please input your username! } @if
+        (control.errors?.['duplicated']) { The username is redundant! }
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Rua</nz-form-label>
+    <nz-form-control
+      [nzSpan]="12"
+      nzHasFeedback
+      nzValidatingTip="Validating..."
+      [nzErrorTip]="userErrorTpl"
+    >
+      <input
+        nz-input
+        formControlName="rua"
+        placeholder="R. letra A"
+        type="text"
+      />
+      <ng-template #userErrorTpl let-control>
+        @if (control.errors?.['required']) { Please input your username! } @if
+        (control.errors?.['duplicated']) { The username is redundant! }
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Número</nz-form-label>
+    <nz-form-control
+      [nzSpan]="12"
+      nzHasFeedback
+      nzValidatingTip="Validating..."
+      [nzErrorTip]="userErrorTpl"
+    >
+      <input nz-input formControlName="numero" placeholder="99" type="number" />
+      <ng-template #userErrorTpl let-control>
+        @if (control.errors?.['required']) { Please input your username! } @if
+        (control.errors?.['duplicated']) { The username is redundant! }
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Complemento</nz-form-label>
+    <nz-form-control
+      [nzSpan]="12"
+      nzHasFeedback
+      nzValidatingTip="Validating..."
+      [nzErrorTip]="userErrorTpl"
+    >
+      <input
+        nz-input
+        formControlName="complemento"
+        placeholder="Maria Aparecida"
+        type="text"
+      />
+      <ng-template #userErrorTpl let-control>
+        @if (control.errors?.['required']) { Please input your username! } @if
+        (control.errors?.['duplicated']) { The username is redundant! }
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Cidade</nz-form-label>
+    <nz-form-control
+      [nzSpan]="12"
+      nzHasFeedback
+      nzValidatingTip="Validating..."
+      [nzErrorTip]="userErrorTpl"
+    >
+      <input
+        nz-input
+        formControlName="cidade"
+        placeholder="Maria Aparecida"
+        type="text"
+      />
+      <ng-template #userErrorTpl let-control>
+        @if (control.errors?.['required']) { Please input your username! } @if
+        (control.errors?.['duplicated']) { The username is redundant! }
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzOffset]="7" [nzSpan]="12">
+      <button nz-button nzType="primary">Submit</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>

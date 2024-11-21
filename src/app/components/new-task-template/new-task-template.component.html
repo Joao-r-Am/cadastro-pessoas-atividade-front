@@ -1,0 +1,99 @@
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Nome</nz-form-label>
+    <nz-form-control
+      [nzSpan]="12"
+      nzHasFeedback
+      nzValidatingTip="Validating..."
+      [nzErrorTip]="userErrorTpl"
+    >
+      <input
+        nz-input
+        formControlName="nome"
+        placeholder="Nome da atividade"
+        type="text"
+      />
+      <ng-template #userErrorTpl let-control>
+        @if (control.errors?.['required']) { Please input your username! } @if
+        (control.errors?.['duplicated']) { The username is redundant! }
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Descrição</nz-form-label>
+    <nz-form-control
+      [nzSpan]="12"
+      nzHasFeedback
+      nzValidatingTip="Validating..."
+      [nzErrorTip]="userErrorTpl"
+    >
+      <textarea
+        nz-input
+        formControlName="descricao"
+        placeholder="Descrição da atividade"
+        nz-input
+        rows="2"
+      ></textarea>
+      <ng-template #userErrorTpl let-control>
+        @if (control.errors?.['required']) { Please input your username! } @if
+        (control.errors?.['duplicated']) { The username is redundant! }
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Data de inicio</nz-form-label>
+    <nz-form-control
+      [nzSpan]="12"
+      nzHasFeedback
+      nzValidatingTip="Validating..."
+      [nzErrorTip]="userErrorTpl"
+    >
+      <input nz-input formControlName="dataInicio" placeholder="" type="date" />
+      <ng-template #userErrorTpl let-control>
+        @if (control.errors?.['required']) { Please input your username! } @if
+        (control.errors?.['duplicated']) { The username is redundant! }
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Data final</nz-form-label>
+    <nz-form-control
+      [nzSpan]="12"
+      nzHasFeedback
+      nzValidatingTip="Validating..."
+      [nzErrorTip]="userErrorTpl"
+    >
+      <input nz-input formControlName="dataFim" placeholder="" type="date" />
+      <ng-template #userErrorTpl let-control>
+        @if (control.errors?.['required']) { Please input your username! } @if
+        (control.errors?.['duplicated']) { The username is redundant! }
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Data criação</nz-form-label>
+    <nz-form-control
+      [nzSpan]="12"
+      nzHasFeedback
+      nzValidatingTip="Validating..."
+      [nzErrorTip]="userErrorTpl"
+    >
+      <input
+        nz-input
+        formControlName="dataCriacao"
+        placeholder=""
+        type="date"
+      />
+      <ng-template #userErrorTpl let-control>
+        @if (control.errors?.['required']) { Please input your username! } @if
+        (control.errors?.['duplicated']) { The username is redundant! }
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control [nzOffset]="7" [nzSpan]="12">
+      <button nz-button nzType="primary">Submit</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>

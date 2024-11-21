@@ -1,0 +1,28 @@
+<main>
+  <div class="position-absolute top-50 start-50 translate-middle">
+    <div class="position-relative">
+      <div class="grid gap-0 row-gap-3">
+        <button
+          class="p-2 g-col-6"
+          nz-button
+          nzType="primary"
+          [nzSize]="'large'"
+          nzBlock
+          (click)="newUser()"
+        >
+          Cadastrar Usuário
+        </button>
+        <button
+          class="p-2 g-col-6 mt-2"
+          nz-button
+          nzType="primary"
+          [nzSize]="'large'"
+          nzBlock
+          (click)="newTask()"
+        >
+          Cadastrar Atividade
+        </button>
+      </div>
+    </div>
+  </div>
+</main>

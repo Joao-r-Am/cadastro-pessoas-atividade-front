@@ -1,0 +1,46 @@
+<main>
+  <div class="position-absolute top-50 start-50 translate-middle p-10">
+    <div class="position-relative">
+      <h1>Login</h1>
+      <form
+        nz-form
+        [formGroup]="validateForm"
+        class="login-form"
+        (ngSubmit)="submitForm()"
+      >
+        <nz-form-item>
+          <nz-form-control nzErrorTip="insira seu email">
+            <nz-input-group nzPrefixIcon="mail">
+              <input
+                type="email"
+                nz-input
+                formControlName="email"
+                placeholder="email"
+              />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Por favor insira sua senha!">
+            <nz-input-group nzPrefixIcon="lock">
+              <input
+                type="password"
+                nz-input
+                formControlName="senha"
+                placeholder="senha"
+              />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <button
+          nz-button
+          class="login-form-button login-form-margin"
+          [nzType]="'primary'"
+        >
+          Log in
+        </button>
+      </form>
+    </div>
+  </div>
+</main>

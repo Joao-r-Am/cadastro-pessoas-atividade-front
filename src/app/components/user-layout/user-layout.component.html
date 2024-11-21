@@ -1,0 +1,55 @@
+<div class="container mt-10 down-screen border border-dark-subtle">
+  <div class="row my-3">
+    <div class="col-auto">
+      <button
+        nz-button
+        nzType="primary"
+        [nzSize]="'large'"
+        (click)="showModal()"
+      >
+        <span nz-icon nzType="plus"></span>
+        Novo usuário
+      </button>
+      <nz-modal
+        [(nzVisible)]="isVisible"
+        nzTitle="Cadastro de usuários"
+        (nzOnCancel)="handleCancel()"
+        (nzOnOk)="handleOk()"
+      >
+        <ng-container *nzModalContent>
+          <app-new-user-template />
+        </ng-container>
+      </nz-modal>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="">
+      <nz-table #basicTable [nzData]="listOfData" class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
+            <th>Endereço</th>
+            <th>Cidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (data of basicTable.data; track data) {
+          <tr>
+            <td>{{ data.nome }}</td>
+            <td>{{ data.email }}</td>
+            <td>{{ data.telefone }}</td>
+            <td>{{ data.cidade }}</td>
+            <td>
+              <a>{{ data.rua }}, {{ data.numero }}</a>
+              <nz-divider nzType="vertical"></nz-divider>
+            </td>
+          </tr>
+          }
+        </tbody>
+      </nz-table>
+    </div>
+  </div>
+</div>

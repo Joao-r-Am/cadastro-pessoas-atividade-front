@@ -1,0 +1,52 @@
+<div class="container mt-10 down-screen border border-dark-subtle">
+  <div class="row my-3">
+    <div class="col-auto">
+      <button
+        nz-button
+        nzType="primary"
+        [nzSize]="'large'"
+        (click)="showModal()"
+      >
+        <span nz-icon nzType="plus"></span>
+        Nova tarefa
+      </button>
+      <nz-modal
+        [(nzVisible)]="isVisible"
+        nzTitle="Cadastro de tarefas"
+        (nzOnCancel)="handleCancel()"
+        (nzOnOk)="handleOk()"
+      >
+        <ng-container *nzModalContent>
+          <app-new-task-template />
+        </ng-container>
+      </nz-modal>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="">
+      <nz-table #basicTable [nzData]="listOfData.tasks" class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Data de inicio</th>
+            <th>Data de criação</th>
+            <th>Data final</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (data of basicTable.data; track data) {
+          <tr>
+            <td>{{ data.nome }}</td>
+            <td>{{ data.descricao }}</td>
+            <td>{{ data.dataInicio }}</td>
+            <td>{{ data.dataFim }}</td>
+            <td>{{ data.dataCriacao }}</td>
+          </tr>
+          }
+        </tbody>
+      </nz-table>
+    </div>
+  </div>
+</div>
