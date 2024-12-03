@@ -41,4 +41,8 @@ export class LoginService {
     }
     return null;
   }
+
+  get loggedIn(): boolean {
+    return localStorage.getItem('token') ? true : false;
+  }
 }
